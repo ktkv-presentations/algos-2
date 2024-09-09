@@ -20,70 +20,356 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
+				<h1>Обзор и области применения языков программирования</h1>
+				<img alt="https://ktkv-presentations.github.io/algos-2/" class="r-stretch" data-type="qrcode">
+			</section>
+			<section>
 				<section>
-					<h1>
-						Beautiful presentations
-					</h1>
-					<h2>New features</h2>
-					<ul>
-						<li>Awesome icons <i class="fa-solid fa-check"></i></li>
-						<li><code class="js">(inline) => code("highlighting")</code></li>
-						<li>Automatic QR Code generation</li>
-						<li>and much more!</li>
-					</ul>
+					<div>
+						<div>
+							<h2>Языки общего назначения</h2>
+							<p>используются для широкого круга задач</p>
+							<code class="plaintext">Python, JavaScript, C, C++, ...</code>
+						</div>
+						<br />
+						<div>
+							<h2>Специализированные языки</h2>
+							<p>созданы для решения конкретных задач</p>
+							<code class="plaintext">R, SQL, MATLAB</code>
+						</div>
+					</div>
+				</section>
+				<section>
+					<img class="stretch-r"
+						alt="https://online.king.edu/wp-content/uploads/2018/09/TLH-48-KU-From-AWK-to-ZIL-The-Alphabet-of-Programming-Languages-R2-18_0828.jpg"
+						data-type="qrcode">
+					<h6>Инфографика языков и для чего они используются</h6>
 				</section>
 			</section>
 			<section>
-				<h1>
-					Custom TokyoNight theme
-				</h1>
-				<h2 class="fragment">That has</h2>
-				<h3 class="fragment">Multi</h3>
-				<h4 class="fragment">Level</h4>
-				<h5 class="fragment">Heading</h5>
-				<h6 class="fragment">Coloring</h6>
-				<h6>Thanks to this project <a href="https://github.com/tcmmichaelb139/obsidian-tokyonight"><i
-							class="fa-brands fa-github"></i></a> for the colorscheme!</h6>
-			</section>
-			<section>
 				<section data-auto-animate>
-					<h1>New code highlighting!</h1>
-					<p>
-						Now also has Tokyo Night <code>highlight.js</code> highlighting implementation
-					</p>
-					<pre><code data-trim data-noescape>
-var foo = {
-    bar: function () {
-             alert("Hello, World!");
-         }
-};	
+					<h2>Области применения языков программирования</h2>
+					<h3>Разработка программного обеспечения</h3>
+					<div style="display: grid; grid-template-columns: repeat(2, 1fr); row-gap: 1em;">
+						<div class="fragment">
+							<div>PC <i class="fa-solid fa-desktop"></i></div>
+							<code class="plaintext">C++ C# Java</code>
+						</div>
+						<div class="fragment">
+							<div>Web <i class="fa-brands fa-chrome"></i></div>
+							<code class="plaintext">FE: JavaScript TypeScript</code></br>
+							<code class="plaintext">BE: Python Ruby PHP Node.js</code>
+						</div>
+						<div class="fragment" style="grid-column: 1/3;">
+							<div>Mobile <i class="fa-solid fa-mobile"></i></div>
+							<code class="plaintext">Android: Java, Kotlin</code><br />
+							<code class="plaintext">iOS: Swift</code><br />
+							<code class="plaintext">Generic: React Native, Flutter</code>
+						</div>
+					</div>
+				</section>
+				<section><img class="r-stretch"
+						src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbYnQ9p6KC3w7Z7BeO22O4dXFnXV0AbESVYg&s" alt="">
+				</section>
+				<section data-auto-animate>
+					<h2>Области применения языков программирования</h2>
+					<h3>Научные вычисления и анализ данных</h3>
+					<div style="display: grid; grid-template-columns: repeat(2, 1fr); row-gap: 1em;">
+						<div><code class="plaintext">Python</code></div>
+						<div><code class="plaintext">R</code></div>
+						<div style="grid-column: 1/3;"><code class="plaintext">MATLAB</code></div>
+					</div>
+				</section>
+				<section>
+					<h4>MATLAB</h4>
+					<pre><code class="matlab r-stretch">
+% Begin WaypointClass.m
+classdef WaypointClass % The class name.
+  properties % The properties of the class behave like Structures
+    latitude
+    longitude
+  end
+  methods
+    % This method that has the same name of the class is the constructor.
+    function obj = WaypointClass(lat, lon)
+      obj.latitude = lat;
+      obj.longitude = lon;
+    end
+
+    % Other functions that use the Waypoint object
+    function r = multiplyLatBy(obj, n)
+      r = n*[obj.latitude];
+    end
+
+    % If we want to add two Waypoint objects together without calling
+    % a special function we can overload MATLAB's arithmetic like so:
+    function r = plus(o1,o2)
+      r = WaypointClass([o1.latitude] +[o2.latitude], ...
+                        [o1.longitude]+[o2.longitude]);
+    end
+  end
+end
+% End WaypointClass.m
+						</code></pre>
+				</section>
+				<section>
+					<h4>R</h4>
+					<pre><code class="r">
+# IF/ELSE
+# Again, pretty standard
+if (4 > 3) {
+    print("4 is greater than 3")
+} else {
+    print("4 is not greater than 3")
+}
+# =>
+# [1] "4 is greater than 3"
+
+# FUNCTIONS
+# Defined like so:
+jiggle &lt;- function(x) {
+    x = x + rnorm(1, sd=.1) # add in a bit of (controlled) noise
+    return(x)
+}
+					</code></pre>
+				</section>
+				<section>
+					<code style="text-align: center; font-size: 2em" class="r">
+jiggle &lt;- function(x)
+					</code>
+					<img src="https://us-tuna-sounds-images.voicemod.net/fbfd578a-82c6-4d7f-9c7e-f28f5d7939fc-1709525908706.png"
+						alt="" class="r-stretch">
+				</section>
+				<section data-auto-animate>
+					<h2>Области применения языков программирования</h2>
+					<h3>Искусственный интеллект и машинное обучение</h3>
+					<div style="display: grid; grid-template-columns: repeat(2, 1fr); row-gap: 1em;">
+						<div class="fragment">
+							<div>Python</div><code class="plaintext">+TensorFlow, +Keras, +PyTorch</code>
+						</div>
+						<div class="fragment">Prolog</div>
+						<div class="fragment" style="grid-column: 1/3;">R</div>
+					</div>
+				</section>
+				<section>
+					<img
+						src="https://programmerhumor.io/wp-content/uploads/2022/05/programmerhumor-io-python-memes-programming-memes-e410fb5d483fe02.jpg"
+						alt="">
+				</section>
+				<section data-auto-animate>
+					<h4>Prolog</h4>
+					<pre><code class="prolog">
+countUpTo2(Value, Limit) :- writeln(Value),
+    Value = Limit -> true ; (
+        NextValue is Value+1,
+        countUpTo2(NextValue, Limit)).
 					</code></pre>
 				</section>
 				<section data-auto-animate>
-					<h1>New code highlighting!</h1>
-					<h5>Inline code highlighting is now also supported!</h5>
-					<p>
-						Just wrap your code with <code>&lt;code&gt;</code> tag and get
-						highlighting like this <code class="js">const foo = () => {return bar}</code>!
-					</p>
+					<h4>Prolog</h4>
+					<pre><code class="prolog">
+countUpTo2(Value, Limit) :- writeln(Value),
+    Value = Limit -> true ; (
+        NextValue is Value+1,
+        countUpTo2(NextValue, Limit)).
+					</code></pre>
+					<img class="r-stretch"
+						src="https://en.meming.world/images/en/thumb/5/5b/Confused_Nick_Young_%28wide%29.jpg/300px-Confused_Nick_Young_%28wide%29.jpg"
+						alt="">
+				</section>
+				<section data-auto-animate>
+					<h2>Области применения языков программирования</h2>
+					<h3>Разработка игр и графики</h3>
+					<div style="display: grid; grid-template-columns: repeat(2, 1fr); row-gap: 1em;">
+						<div class="fragment">
+							<div>Unity</div>
+							<code>C#</code>
+						</div>
+						<div class="fragment">
+							<div>Godot</div>
+							<code>Go</code>
+						</div>
+						<div style="grid-column: 1/3;" class="fragment">
+							<div>Unreal Engine</div>
+							<code>C++</code>
+						</div>
+					</div>
+				</section>
+				<section data-auto-animate="">
+					<h2>Области применения языков программирования</h2>
+					<h3>Системное программирование</h3>
+					<div class="fragment" style="font-size: 2em;"><i class="fa-solid fa-crown"></i>
+						<div>C</div>
+					</div>
+					<div class="fragment">C++</div>
+				</section>
+				<section data-auto-animate="">
+					<h2>Области применения языков программирования</h2>
+					<h2>Работа с базами данных</h2>
+					<div>SQL</div>
+				</section>
+				<section>
+					<img src="https://preview.redd.it/0ciiv1xlmue61.png?auto=webp&s=4904f27957dd07cd808a7f5b53e7fa34c574b1aa"
+						alt="" class="r-stretch">
+					<div>
+						<code style="font-size: 2em;" class="sql">SELECT * FROM TABLE</code>
+					</div>
+				</section>
+				<section>
+					<h2>JS или не JS, вот в чем вопрос</h2>
+					<img src="https://hirrolot.github.io/media/why-static-languages-suffer-from-complexity/types-meme.png" alt=""
+						class="r-stretch">
 				</section>
 			</section>
 			<section>
-				<h1>Now supports Awesome Icons!</h1>
-				<p>Awesome project that provides awesome icons with classes!</p>
-				<h6>Checkout their github for icons like this <a href="https://github.com/FortAwesome/Font-Awesome"><i
-							class="fa-brands fa-github"></i></a>!
-				</h6>
+				<section data-auto-animate>
+					<h2>Стандарты языков программирования</h2>
+					<p>документы, содержащие формализованные правила и рекомендации по использованию и реализации конкретного
+						языка</p>
+				</section>
+				<section data-auto-animate>
+					<h2>Стандарты языков программирования</h2>
+					<div style="display: grid; grid-template-columns: repeat(2, 1fr); row-gap: 1em;">
+						<div>Совместимость и переносимость</div>
+						<div>Поддержка и развитие</div>
+						<div>Унификация</div>
+						<div>Долгосрочное развитие</div>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h2>Стандарты языков программирования</h2>
+					<p>
+						стандарты разрабатываются специальными комитетами, в состав которых входят разработчики, представители
+						компаний и эксперты в области программирования
+					</p>
+					<div>
+						<ul>
+							<li class="fragment">ISO (Международная организация по стандартизации)</li>
+							<li class="fragment">ANSI (Американский национальный институт стандартов)</li>
+						</ul>
+					</div>
+				</section>
+				<section data-auto-animate="">
+					<h2>Стандарты языков программирования</h2>
+					<h3>Этапы разработки стандартов</h3>
+					<ol>
+						<li class="fragment">Предложение и разработка чернового стандарта</li>
+						<li class="fragment">Обсуждение и внесение изменений с учетом предложений экспертов и разработчиков</li>
+						<li class="fragment">Публикация окончательной версии стандарта</li>
+					</ol>
+				</section>
+				<section data-auto-animate="">
+					<h2>Стандарты языков программирования</h2>
+					<h3>Примеры стандартов языков программирования</h3>
+					<div style="display: grid; grid-template-columns: repeat(2, 1fr);">
+						<div>
+							<h5>JavaScript</h5><code class="plaintext">ECMAScript (ES)</code>
+						</div>
+						<div>
+							<h5>Python</h5><code class="plaintext">Python Enhancement Proposals (PEP)</code>
+						</div>
+					</div>
+				</section>
+				<section style="display: grid; grid-template-columns: repeat(2, 1fr);">
+					<h4>ECMAScript Proposals</h4>
+					<img alt="https://github.com/tc39/proposals" data-type="qrcode" class="r-stretch">
+				</section>
+				<section style="display: grid; grid-template-columns: repeat(2, 1fr);">
+					<h4>PEP Proposals</h4>
+					<img alt="https://peps.python.org/" data-type="qrcode" class="r-stretch">
+				</section>
+				<section data-auto-animate="">
+					<h2>Стандарты языков программирования</h2>
+					<h3>Различия в реализации стандартов</h3>
+					<p>Несмотря на наличие стандартов, реализации одного и того же языка могут различаться в зависимости от
+						платформы или компилятора</p>
+					<div>C: <code class="plaintext">
+						GCC != Clang
+					</code></div>
+					<div>SQL: <code class="plaintext">
+						PostreSQL != MySQL
+					</code></div>
+				</section>
+				<section data-auto-animate="">
+					<h2>Стандарты языков программирования</h2>
+					<h3>Проблемы и вызовы стандартизации</h3>
+					<div style="display: grid; grid-template-columns: repeat(2, 1fr); row-gap: 1em;">
+						<div>Обратная совместимость</div>
+						<div>Расширения и вендор-специфичные функции</div>
+						<div style="grid-column: 1/3;">Замедление развития</div>
+					</div>
+				</section>
+				<section>
+					<div>Мир, если бы <code class="python">print "Hello world!"</code> работало в Python3</div>
+					<img src="https://ru.meming.world/images/ru/thumb/a/a4/The_World_If.jpg/300px-The_World_If.jpg" alt=""
+						class="r-stretch">
+				</section>
 			</section>
 			<section>
-				<h1>Now supports automatic QRCode generation!</h1>
-				<p>With GoQR you can just add data-type and alt attributes to your <code
-						class="html">&lt;img alt="https://goqr.me/" data-type="qrcode" /&gt;</code> tag!</p>
-				<img class="r-stretch" alt="https://goqr.me/" data-type="qrcode" />
-				</h6>
-			</section>
-			<section>
-				<h1>New changes on the way!</h1>
+				<section data-auto-animate="">
+					<h2>Интегрированная среда разработки</h2>
+					<h5>Integrated Development Environment (IDE)</h5>
+					<p>программное обеспечение, предоставляющее разработчику все необходимые инструменты для создания, отладки и
+						управления программными проектами в одном интерфейсе</p>
+					<br>
+					<h5>Составляющие IDE</h5>
+					<div style="display: grid; grid-template-columns: repeat(2, 1fr); row-gap: 1em;">
+						<div>текстовый редактор</div>
+						<div>компилятор/интерпретатор</div>
+						<div>отладчик</div>
+						<div>инструменты управления проектами</div>
+					</div>
+				</section>
+				<section data-auto-animate="">
+					<h2>Задача IDE</h2>
+					<p>облегчить процесс разработки и повысить его эффективность, предоставляя интегрированные инструменты,
+						которые работают вместе для создания программного обеспечения</p>
+				</section>
+				<section>
+					<h4>Это что за IDEMON?</h4>
+					<img class="r-stretch"
+						src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/768px-Visual_Studio_Code_1.35_icon.svg.png"
+						style="filter: brightness(0) invert(1)" alt="">
+					<h5 class="fragment">VSCode</h5>
+				</section>
+				<section>
+					<h4>Это что за IDEMON?</h4>
+					<img class="r-stretch"
+						src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Visual_Studio_Icon_2022.svg/2048px-Visual_Studio_Icon_2022.svg.png"
+						style="filter: brightness(0) invert(1)" alt="">
+					<h5 class="fragment">Visual Studio</h5>
+				</section>
+				<section>
+					<h4>Это что за IDEMON?</h4>
+					<img class="r-stretch" src="https://download.logo.wine/logo/JetBrains/JetBrains-Logo.wine.png"
+						style="filter: brightness(0) invert(1)" alt="">
+					<h5 class="fragment">JetBrains</h5>
+				</section>
+				<section>
+					<h4>Это что за IDEMON?</h4>
+					<img class="r-stretch"
+						src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/PyCharm_Icon.svg/1024px-PyCharm_Icon.svg.png"
+						style="filter: brightness(0) invert(1)" alt="">
+					<h5 class="fragment">PyCharm</h5>
+				</section>
+				<section>
+					<h4>Это что за IDEMON?</h4>
+					<img class="r-stretch"
+						src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/IntelliJ_IDEA_Icon.svg/2048px-IntelliJ_IDEA_Icon.svg.png"
+						style="filter: brightness(0) invert(1)" alt="">
+					<h5 class="fragment">IntelliJ</h5>
+				</section>
+				<section>
+					<h2>Будущее IDE</h2>
+					<h5>Интеграция с облачными сервисами</h5>
+					<div>виртуальные машины для выполнения кода и тестирования в облаке</div>
+					<br>
+					<h5>AI и помощь разработчикам</h5>
+					<div>GitHub Copilot</div>
+				</section>
+				<section>
+					<img src="https://i.redd.it/qoih7zhsyyoa1.jpg" alt="" class="r-stretch">
+				</section>
 			</section>
 		</div>
 	</div>

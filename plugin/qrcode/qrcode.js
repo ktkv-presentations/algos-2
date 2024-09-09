@@ -15,7 +15,7 @@ const bgColor = rgbToHyphen(
 
 const getQRCode = async (url) => {
   return fetch(
-    `https://api.qrserver.com/v1/create-qr-code/?size=300x300&qzone=1&ecc=L&color=${textColor}&bgcolor=${bgColor}&data=${url}`
+    `https://api.qrserver.com/v1/create-qr-code/?size=500x500&qzone=1&ecc=L&color=${textColor}&bgcolor=${bgColor}&data=${url}`
   ).then((res) => res.url)
 }
 
